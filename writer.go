@@ -9,7 +9,7 @@ import (
 )
 
 // Write fetched data to CSV
-func writeSites(dataChan chan site, wg *sync.WaitGroup) {
+func writeSites(dataChan chan site, wg *sync.WaitGroup, outfile string) {
 	file, err := os.Create(outfile)
 	if err != nil {
 		panic(fmt.Sprintf("Unable to open file %s - error %s", outfile, err))

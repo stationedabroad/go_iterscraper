@@ -21,7 +21,7 @@ type site struct {
 }
 
 // Fetch the website body
-func (s *site) fetch() {
+func (s *site) fetch(nameQuery, addressQuery, phoneQuery, emailQuery string) {
 	resp, err := http.Get(s.url)
 	if err != nil {
 		s.err = err
@@ -48,7 +48,7 @@ func (s *site) fetch() {
 	s.name = strings.TrimSpace(doc.Find(nameQuery).Text())
 	s.address = strings.TrimSpace(doc.Find(addressQuery).Text())
 	s.phone = strings.TrimSpace(doc.Find(phoneQuery).Text())
-	s.email = strings.TrimSpace(doc.Find(phoneQuery).Text())
+	s.email = strings.TrimSpace(doc.Find(emailQuery).Text())
 }
 
 // Include headers with the row output format so that we can compare easily.
