@@ -1,3 +1,5 @@
+## Note: this is taken from https://github.com/philipithomas an being used here as a refactor exercise.
+
 # iterscraper
 
 [![Build Status](https://travis-ci.org/philipithomas/iterscraper.svg?branch=master)](https://travis-ci.org/philipithomas/iterscraper)
